@@ -38,6 +38,7 @@ public class Client {
 
 		System.out.println("Get a specific student based on name- ");
 		System.out.println(st.toString());
+		System.out.println(st.getName());
 
 //		Student student = new Student();
 //		student.setStudentId(100);
