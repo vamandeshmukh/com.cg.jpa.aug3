@@ -35,8 +35,8 @@ public class StudentServiceImpl implements StudentService {
 	
 	@Override
 	public Student findStudentById(int id) {
-		//no need of transaction, as it's an read operation
 		Student student  = dao.getStudentById(id);
+		System.out.println("findStudentById in StudentServiceImpl");
 		return student;
 	}
 }

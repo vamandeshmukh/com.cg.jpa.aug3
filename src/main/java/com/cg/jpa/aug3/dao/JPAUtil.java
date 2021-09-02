@@ -11,12 +11,14 @@ public class JPAUtil {
 
 	static {
 		factory = Persistence.createEntityManagerFactory("abcd");
+		System.out.println("persistance.xml accessed.");
 	}
 
 	public static EntityManager getEntityManager() {
 		if (entityManager == null || !entityManager.isOpen()) {
 			entityManager = factory.createEntityManager();
 		}
+		System.out.println("entityManager object created.");
 		return entityManager;
 	}
 

@@ -15,6 +15,7 @@ public class StudentDaoImpl implements StudentDao {
 	@Override
 	public Student getStudentById(int id) {
 		Student student = entityManager.find(Student.class, id);
+		System.out.println("getStudentById in StudentDaoImpl");
 		return student;
 	}
 

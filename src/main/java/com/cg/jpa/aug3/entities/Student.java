@@ -11,6 +11,7 @@ import javax.persistence.Table;
 public class Student implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
 	@Id
 	private int studentId;
 	private String name;
@@ -30,4 +31,10 @@ public class Student implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", name=" + name + "]";
+	}
+
 }
