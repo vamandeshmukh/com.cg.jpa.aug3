@@ -4,6 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import com.cg.jpa.aug3.entities.Student;
+
 public class StudentTest {
 
 	public static void main(String[] args) {
@@ -20,6 +22,8 @@ public class StudentTest {
 //		em.persist(student); // insert a new record 
 		
 		System.out.println(em.find(Student.class, 101).getName());
+		
+		
 
 		em.getTransaction().commit();
 
