@@ -17,7 +17,9 @@ public class StudentTest {
 		Student student = new Student();
 		student.setName("Sonu");
 
-		em.persist(student); // insert a new record 
+//		em.persist(student); // insert a new record 
+		
+		System.out.println(em.find(Student.class, 101).getName());
 
 		em.getTransaction().commit();
 
