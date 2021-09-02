@@ -1,5 +1,6 @@
 package com.cg.jpa.aug3.dao;
 
+import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
 
 import com.cg.jpa.aug3.entities.Student;
@@ -20,7 +21,7 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
-	public void addStudent(Student student) {
+	public void addStudent(Student student) throws EntityExistsException {
 		entityManager.persist(student);
 	}
 
