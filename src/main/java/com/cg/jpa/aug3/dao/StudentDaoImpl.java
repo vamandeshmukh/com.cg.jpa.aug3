@@ -23,6 +23,10 @@ public class StudentDaoImpl implements StudentDao {
 	@Override
 	public void addStudent(Student student) throws EntityExistsException {
 		entityManager.persist(student);
+		// entityManager.
+		// CRUD - insert - persist(), select - find(), update - merge(), delete - remove() 
+		// select * from students where first_name = "Sachin";
+		
 	}
 
 	@Override
