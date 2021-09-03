@@ -24,6 +24,7 @@ import com.cg.jpa.aug3.entities.Student;
 public class Client2 {
 
 	public static void main(String[] args) {
+		System.out.println("Start...");
 
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("abcd");
 		EntityManager em = factory.createEntityManager();
