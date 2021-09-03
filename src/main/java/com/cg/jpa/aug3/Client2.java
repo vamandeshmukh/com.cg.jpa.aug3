@@ -27,8 +27,11 @@ public class Client2 {
 		System.out.println("Start...");
 
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("abcd");
+
 		EntityManager em = factory.createEntityManager();
+
 		em.getTransaction().begin();
+
 		Student student = new Student();
 		student.setName("Sonu");
 		Address homeAddress = new Address();
@@ -41,10 +44,13 @@ public class Client2 {
 		student.setAddress(homeAddress);
 
 		System.out.println("persist only student, no need to persist Address explicitly");
+
 		em.persist(student);
+		
 		em.getTransaction().commit();
 
 		System.out.println("Added one student with address to database.");
+
 		em.close();
 		factory.close();
 	}

@@ -13,6 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "students")
+
 public class Student implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -24,6 +25,7 @@ public class Student implements Serializable {
 	private String name;
 
 	@OneToOne(cascade = CascadeType.ALL)
+	
 	@JoinColumn(name = "address_id") // create table students (sid INT, sname varchar(10), address varchar(255)
 										// references address(address_id));
 	private Address address;

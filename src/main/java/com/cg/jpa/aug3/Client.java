@@ -20,7 +20,7 @@ public class Client {
 
 		// Debug this program as Debug -> Debug as Java Application
 
-//		StudentService service = new StudentServiceImpl();
+		StudentService service = new StudentServiceImpl();
 
 		EntityManager entityManager = JPAUtil.getEntityManager();
 
@@ -32,7 +32,7 @@ public class Client {
 		for (Student s : studentsList)
 			System.out.println(s.toString());
 
-		String selectOneStudent = "SELECT s FROM Student s WHERE s.name = 'Monu'";
+		String selectOneStudent = "SELECT s FROM Student s WHERE s.name = 'Sonu'";
 		TypedQuery<Student> query2 = entityManager.createQuery(selectOneStudent, Student.class);
 		Student st = query2.getSingleResult();
 
@@ -40,25 +40,25 @@ public class Client {
 		System.out.println(st.toString());
 		System.out.println(st.getName());
 
-//		Student student = new Student();
-//		student.setStudentId(100);
-//		student.setName("Sachin");
-//		service.addStudent(student);
-//
-//		// at this breakpoint, we have added one record to table
-//		student = service.findStudentById(100);
-//		System.out.println(student.toString());
-//
-//		student.setName("Sachin Tendulkar");
-//		service.updateStudent(student);
-//
-//		// at this breakpoint, we have updated record added in first section
-//		student = service.findStudentById(100);
-//		System.out.println(student.toString());
-//
-//		// at this breakpoint, record is removed from table
-//		service.removeStudent(student);
-//		System.out.println("End of program...");
+		Student student = new Student();
+		student.setStudentId(100);
+		student.setName("Sachin");
+		service.addStudent(student);
+
+		// at this breakpoint, we have added one record to table
+		student = service.findStudentById(27);
+		System.out.println(student.toString());
+
+		student.setName("Sachin Tendulkar");
+		service.updateStudent(student);
+
+		// at this breakpoint, we have updated record added in first section
+		student = service.findStudentById(27);
+		System.out.println(student.toString());
+
+		// at this breakpoint, record is removed from table
+		service.removeStudent(student);
+		System.out.println("End of program...");
 
 	}
 }
